@@ -48,10 +48,10 @@
   vars:
     users_to_create:
       - name: alice
-        password: "password123"
+        password: "{{ 'password123' | password_hash('sha512', 'mysecretsalt') }}"
         groups: Multipleusers
       - name: bob
-        password: "password456"
+        password: "{{ 'password456' | password_hash('sha512', 'mysecretsalt') }}"
         groups: Multipleusers
 
 
