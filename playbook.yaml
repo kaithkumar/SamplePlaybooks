@@ -45,13 +45,13 @@
       with_items: "{{ users_to_create }}"
     
     # variables used for create multiple users job
-    vars:
-      users_to_create:
-        - name: alice
-          password: "{{ 'password123' | password_hash('sha512', 'mysecretsalt') }}"
-          groups: Multipleusers
-        - name: bob
-          password: "{{ 'password456' | password_hash('sha512', 'mysecretsalt') }}"
-          groups: Multipleusers
+  vars:
+    users_to_create:
+      - name: alice
+        password: "{{ 'password123' | password_hash('sha512', 'mysecretsalt') }}"
+        groups: Multipleusers
+      - name: bob
+        password: "{{ 'password456' | password_hash('sha512', 'mysecretsalt') }}"
+        groups: Multipleusers
 
 
