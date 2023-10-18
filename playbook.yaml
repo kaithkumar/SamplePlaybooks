@@ -60,7 +60,11 @@
           - tree
           - mlocate
         state: present
-    
+
+    # gather facts
+    - name: Print Hostname
+      ansible.builtin.debug:
+        var: ansible_hostname
 
 
 
