@@ -4,8 +4,7 @@
   become: yes
   tasks:
     - name: simple task
-      shell:
-        cmd: ls -ltr
+      shell: ls -ltr
       register: lsCommand
     - name: printing the previous command output
       debug:
