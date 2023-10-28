@@ -10,3 +10,6 @@
     - name: printing the previous command output
       debug:
         msg: "{{lsCommand}}"
+    - name: printing the single field from previous command output
+      debug:
+        msg: "{{lsCommand.stdout}}"
