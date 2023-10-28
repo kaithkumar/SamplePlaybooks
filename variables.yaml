@@ -10,9 +10,12 @@
     dictionary:
       project: "tesco"
       company: "nagarro"
+      nested_dictionary:
+        inside_dict: "simple"
     
   tasks: 
     - name: printing the value from varibales
       debug:
         msg: "printing the variable from array {{ names[1]}}"
         msg: "printing the variable from dictionary {{ dictionary }}"
+        msg: "printing value inside nested dictionary {{ dictionary.nested_dictionary.inside_dict }}"
