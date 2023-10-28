@@ -11,4 +11,4 @@
   tasks: 
     - name: printing the value from varibales
       debug:
-        msg: "printing the variable {{ names[1]}}""
+        msg: "printing the variable {{ names[1]}}"
