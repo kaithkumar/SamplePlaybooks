@@ -6,7 +6,7 @@
     - name: to induce error
       shell:
         cmd: induce_error  # there is no such command, it will fail
-      ignore_error: yes
+      ignore_errors: yes
     - name: simple task
       shell:
         cmd: ls -ltr
