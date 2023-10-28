@@ -1,10 +1,11 @@
 ---
 - name: register keyword in variable
-  groups: all
+  hosts: all
   become: yes
   tasks:
     - name: simple task
-      shell: ls -ltr
+      shell:
+        cmd: ls -ltr
       register: lsCommand
     - name: printing the previous command output
       debug:
