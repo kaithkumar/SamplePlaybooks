@@ -1,5 +1,5 @@
 ---
-- name: create user with shell and 
+- name: create user with shell and other inputs
   hosts: all
   become: yes
   vars: 
@@ -9,5 +9,5 @@
       - item3
   tasks:
     - name: create user with variables and multiple 
-      bebug:
+      debug:
         msg: "{{ $greetings }}"
