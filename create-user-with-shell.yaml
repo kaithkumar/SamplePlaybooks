@@ -21,15 +21,15 @@
         shell: "{{ item.shell }}"
         group: "{{ item.group }}"
         uid: "{{ item.uid }}"
-        description: "{{ item.description }}"
+        comment: "{{ item.comment }}"
       loop: 
         - name: alice
           shell: /bin/sh
           group: Check_group
           uid: 1040
-          description: alice description
+          comment: alice description
         - name: bob
           shell: /bin/sh
           group: Check_group
           uid: 1041
-          description: bob description
+          comment: bob description
