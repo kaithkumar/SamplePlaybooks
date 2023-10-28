@@ -3,23 +3,28 @@
   hosts: group
   become: yes
   tasks:
+  ansible_facts
     # gather facts
     - name: Print Hostname
       debug:
-        var: ansible_hostname
+        var: ansible_facts
+        
+    - name: Print Hostname
+      debug:
+        var: ansible_hostname  # magic variables
 
     # using gather facts
     - name: Install httpd on RedHat-based systems
       package:
         name: "httpd"
         state: present
-      when: ansible_facts["os_name"] == "RedHat"
+      when: ansible_facts[""ansible_all_ipv4_addresses"] == "192.168.1.10"
 
     - name: Install apache2 on Ubuntu-based systems
       package:
         name: "apache2"
         state: present
-      when: ansible_facts["os_name"] == "Ubuntu"
+      when: ansible_facts[""ansible_all_ipv4_addresses"] == "192.168.1.11"
       # check
 
 
