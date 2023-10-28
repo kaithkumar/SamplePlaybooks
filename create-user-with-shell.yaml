@@ -1,0 +1,13 @@
+---
+- name: create user with shell and 
+  hosts: all
+  become: yes
+  vars: 
+    greetings:
+      - item1
+      - item2
+      - item3
+  tasks:
+    - name: create user with variables and multiple 
+      bebug:
+        msg: "{{ $greetings }}"
