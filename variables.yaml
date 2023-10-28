@@ -1,0 +1,14 @@
+---
+- name: using varibales
+  hosts: all
+  become: yes
+  vars:
+    names:
+      - kaith
+      - lohitha
+      - vinothini
+    
+  tasks: 
+    - name: printing the value from varibales
+      debug:
+        msg: "printing the variable {{ names[1]}}""
