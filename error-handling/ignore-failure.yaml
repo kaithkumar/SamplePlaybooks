@@ -1,0 +1,12 @@
+---
+- name: continue running the playbook even when a task is failed
+  hosts: all
+  become: yes
+  tasks: 
+    - name: to induce error
+      shell:
+        cmd: induce_error  # there is no such command, it will fail
+      ignore_error: yes
+    - name: simple task
+      shell:
+        cmd: ls -ltr
