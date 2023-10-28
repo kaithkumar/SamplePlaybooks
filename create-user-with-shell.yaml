@@ -27,9 +27,9 @@
           shell: /bin/sh
           group: Check_group
           uid: 1040
-          description: "alice description"
+          description: alice description
         - name: bob
           shell: /bin/sh
           group: Check_group
           uid: 1041
-          description: "bob description"
+          description: bob description
