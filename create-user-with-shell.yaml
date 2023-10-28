@@ -11,3 +11,19 @@
     - name: create user with variables and multiple 
       debug:
         msg: "{{ greetings }}"
+    - name: Create a group
+      group:
+        name: Check_group
+        state: present
+    - name: add multiple users
+      user:
+        name: "{{ item.name }}"
+        shell: "{{ item.shell }}"
+        group: "{{ item.group }}"
+      loop: 
+        - name: alice
+          shell: /bin/sh
+          group: Check_group
+        - name: bob
+          shell: /bin/sh
+          group: Check_group
