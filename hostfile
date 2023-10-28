@@ -1,2 +1,2 @@
 [group]
-192.168.1.13 ansible_user=target_user
+192.168.1.13 ansible_user=target_user ansible_password=password
