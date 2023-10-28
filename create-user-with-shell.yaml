@@ -29,10 +29,10 @@
           group: Check_group
           uid: 1040
           comment: alice description
-          home: "aliceHome"
+          home: /home/aliceHome
         - name: bob
           shell: /bin/sh
           group: Check_group
           uid: 1041
           comment: bob description
-          home: "bobHome"
+          home: /home/bobHome
