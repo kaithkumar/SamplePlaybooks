@@ -7,8 +7,12 @@
       - kaith
       - lohitha
       - vinothini
+    dictionary:
+      project: "tesco"
+      company: "nagarro"
     
   tasks: 
     - name: printing the value from varibales
       debug:
-        msg: "printing the variable {{ names[1]}}"
+        msg: "printing the variable from array {{ names[1]}}"
+        msg: "printing the variable from dictionary {{ dictionary }}"

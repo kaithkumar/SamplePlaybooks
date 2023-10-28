@@ -1,0 +1,26 @@
+---
+- name: To install httpd and ensure apache is running
+  hosts: group
+  become: yes
+  tasks:
+    # gather facts
+    - name: Print Hostname
+      debug:
+        var: ansible_hostname
+
+    # using gather facts
+    - name: Install httpd on RedHat-based systems
+      package:
+        name: "httpd"
+        state: present
+      when: ansible_facts["os_name"] == "RedHat"
+
+    - name: Install apache2 on Ubuntu-based systems
+      package:
+        name: "apache2"
+        state: present
+      when: ansible_facts["os_name"] == "Ubuntu"
+      # check
+
+
+
