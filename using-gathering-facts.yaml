@@ -3,12 +3,11 @@
   hosts: group
   become: yes
   tasks:
-  ansible_facts
     # gather facts
-    - name: Print Hostname
+    - name: Print all
       debug:
         var: ansible_facts
-        
+
     - name: Print Hostname
       debug:
         var: ansible_hostname  # magic variables
