@@ -29,10 +29,10 @@
           group: Check_group
           uid: 1040
           comment: alice description
-          home: /home/aliceHome
+          home: /home/aliceHome    #home directory should be a path with /home
         - name: bob
           shell: /bin/sh
           group: Check_group
           uid: 1041
           comment: bob description
-          home: /home/bobHome
+          home: /home/bobHome      #home directory should be a path with /home
