@@ -8,7 +8,7 @@
       - item2
       - item3
   tasks:
-    - name: create user with variables and multiple 
+    - name: create user with variables and multiple params
       debug:
         msg: "{{ greetings }}"
     - name: Create a group
@@ -20,10 +20,16 @@
         name: "{{ item.name }}"
         shell: "{{ item.shell }}"
         group: "{{ item.group }}"
+        uid: "{{ item.uid }}"
+        description: "{{ item.description }}"
       loop: 
         - name: alice
           shell: /bin/sh
           group: Check_group
+          uid: 1040
+          description: "alice description"
         - name: bob
           shell: /bin/sh
           group: Check_group
+          uid: 1041
+          description: "bob description"
