@@ -13,7 +13,7 @@
           debug:
             msg: "rescue job run"
 
-      block:
+    - block:
         - name: this task will fail
           shell:
             cmd: ls
