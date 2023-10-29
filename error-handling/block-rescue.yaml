@@ -8,7 +8,7 @@
         - name: this task will fail
           shell:
             cmd: this command will fail
-      rescue: this will run as the block is failure
+      rescue: 
         - name: this rescue will run
           debug:
             msg: "rescue job run"
@@ -17,7 +17,7 @@
         - name: this task will fail
           shell:
             cmd: ls
-      rescue: this will not run as the block is failure
-        - name: this rescue will run
+      rescue:
+        - name: this rescue will not run
           debug:
             msg: "rescue will not run"
