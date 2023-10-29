@@ -20,7 +20,8 @@
         - name: Start service bar and enable it
           debug:
             msg: "2nd task executed"
-       when: ansible_facts.all_ipv4_addresses[0] == '192.168.1.13'  # when: "'192.168.1.13' in ansible_facts.all_ipv4_addresses" instead of giving index this also will work
+       when: ansible_facts.all_ipv4_addresses[0] == '192.168.1.13' 
+       # when: "'192.168.1.13' in ansible_facts.all_ipv4_addresses" instead of giving index this also will work 
       become: true
       become_user: root
       ignore_errors: true
