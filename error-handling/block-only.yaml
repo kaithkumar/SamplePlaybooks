@@ -12,7 +12,7 @@
             name:
               - httpd
               - mlocate
-            state: present
+            state: present   
         - name: checking ignore error
           shell:
             cmd: 2nd task executed

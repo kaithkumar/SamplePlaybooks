@@ -1,0 +1,23 @@
+---
+- name: block and rescue
+  hosts: all
+  become: yes
+  tasks:
+    - name: check block and rescue
+      block:
+        - name: this task will fail
+          shell:
+            cmd: this command will fail
+      rescue: this will run as the block is failure
+        - name: this rescue will run
+          debug:
+            msg: "rescue job run"
+
+      block:
+        - name: this task will fail
+          shell:
+            cmd: ls
+      rescue: this will not run as the block is failure
+        - name: this rescue will run
+          debug:
+            msg: "rescue will not run"
