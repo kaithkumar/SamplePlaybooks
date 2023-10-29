@@ -10,15 +10,13 @@
               - httpd
               - memcached
             state: present
-
         - name: checking ignore error
             shell:
-              cmd: "2nd task executed"
+              cmd: 2nd task executed
 
         - name: Start service bar and enable it
           debug:
             msg: "2nd task executed"
-
       when: ansible_facts['ansible_all_ipv4_addresses'] == '192.168.1.13'
       become: true
       become_user: root
