@@ -4,7 +4,10 @@
   tasks:
     - name: Install, configure, and start Apache
       block:
-        - name: Install httpd and memcached
+        - name: Print Hostname
+          debug:
+            var: ansible_facts
+        - name: Install httpd and mlocate
           yum:
             name:
               - httpd
