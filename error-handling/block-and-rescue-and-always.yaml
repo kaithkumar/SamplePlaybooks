@@ -1,0 +1,5 @@
+---
+- name: check block rescue and always
+  hosts: all
+  become: yes
+  

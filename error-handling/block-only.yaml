@@ -1,0 +1,25 @@
+---
+- name: to check block
+  hosts: all
+  tasks:
+    - name: Install, configure, and start Apache
+      block:
+        - name: Install httpd and memcached
+          yum:
+            name:
+              - httpd
+              - memcached
+            state: present
+
+        - name: checking ignore error
+            shell:
+              cmd: "2nd task executed"
+
+        - name: Start service bar and enable it
+          debug:
+            msg: "2nd task executed"
+
+      when: ansible_facts['ansible_all_ipv4_addresses'] == '192.168.1.13'
+      become: true
+      become_user: root
+      ignore_errors: true
