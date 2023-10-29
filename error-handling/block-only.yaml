@@ -20,7 +20,7 @@
         - name: Start service bar and enable it
           debug:
             msg: "2nd task executed"
-       when: ansible_facts.all_ipv4_addresses[0] == '192.168.1.13' 
+      when: ansible_user_shell == "/bin/bash"
       become: true
       become_user: root
       ignore_errors: true

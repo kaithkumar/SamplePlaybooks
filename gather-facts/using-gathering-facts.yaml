@@ -17,13 +17,13 @@
       package:
         name: "httpd"
         state: present
-      when: ansible_facts.all_ipv4_addresses[0] == '192.168.1.13'
+      when: ansible_user_shell == "/bin/bash"
 
     - name: Install apache2 on Ubuntu-based systems
       package:
         name: "apache2"
         state: present
-      when: ansible_facts.all_ipv4_addresses[0] == '192.168.1.10'
+      when: ansible_user_shell == "/bin/zsh"
       # check
 
 
