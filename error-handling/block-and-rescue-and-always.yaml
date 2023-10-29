@@ -1,5 +1,31 @@
 ---
-- name: check block rescue and always
+- name: block and rescue
   hosts: all
   become: yes
-  
+  tasks:
+    - name: check block and rescue
+      block:
+        - name: this task will fail
+          shell:
+            cmd: this command will fail
+      rescue: 
+        - name: this rescue will run
+          debug:
+            msg: "rescue job run"
+      always:
+        - name: this is a always job
+          debug:
+            msg: this always run for failed job
+
+    - block:
+        - name: this task will not fail
+          shell:
+            cmd: ls
+      rescue:
+        - name: this rescue will not run
+          debug:
+            msg: "rescue will not run"
+      always:
+        - name: this is a always job
+          debug:
+            msg: this always run for a successful job
