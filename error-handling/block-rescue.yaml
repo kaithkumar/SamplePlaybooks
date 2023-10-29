@@ -14,7 +14,7 @@
             msg: "rescue job run"
 
     - block:
-        - name: this task will fail
+        - name: this task will not fail
           shell:
             cmd: ls
       rescue:
