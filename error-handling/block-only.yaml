@@ -11,8 +11,8 @@
               - memcached
             state: present
         - name: checking ignore error
-            shell:
-              cmd: 2nd task executed
+          shell:
+            cmd: 2nd task executed
 
         - name: Start service bar and enable it
           debug:
