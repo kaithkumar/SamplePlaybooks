@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: check block and rescue
-    - block:
+      block:
         - name: this task will fail
           shell:
             cmd: this command will fail
@@ -13,7 +13,7 @@
           debug:
             msg: "rescue job run"
 
-    - block:
+      block:
         - name: this task will fail
           shell:
             cmd: ls
