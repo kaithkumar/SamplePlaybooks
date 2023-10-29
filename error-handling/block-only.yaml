@@ -8,7 +8,7 @@
           yum:
             name:
               - httpd
-              - memcached
+              - mlocate
             state: present
         - name: checking ignore error
           shell:
@@ -17,7 +17,7 @@
         - name: Start service bar and enable it
           debug:
             msg: "2nd task executed"
-      when: ansible_facts['ansible_all_ipv4_addresses'] == '192.168.1.13'
+      when: ansible_facts["ansible_all_ipv4_addresses"] == "192.168.1.13"
       become: true
       become_user: root
       ignore_errors: true
