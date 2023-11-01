@@ -7,3 +7,7 @@
     - name: check the variable reading from vault
       debug: 
         var: my_secret
+  # command for running this file
+  # ansible-playbook ansible-vault-check.yaml -i hostfile --ask-vault-pass
+  # if variable file not read from the task we have to use the command
+  # ansible-playbook ansible-vault-check.yaml -i hostfile -e my_vault.yaml --ask-vault-pass
