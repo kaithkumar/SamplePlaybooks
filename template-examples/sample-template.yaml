@@ -6,12 +6,18 @@
       template:
         src: /home/ansible_user/SamplePlaybooks/template-examples/template/conf.j2
         dest: /tmp/sample/tomcat/config.conf
+        owner: target_user
+        group: target_user
+        mode: '0777'
       vars: 
         port_number: 80
     - name: create a .conf file for httpd
       template:
         src: /home/ansible_user/SamplePlaybooks/template-examples/template/conf.j2
         dest: /tmp/sample/apache/config.conf
+        owner: target_user
+        group: target_user
+        mode: '0777'
       vars: 
         port_number: 81
 
