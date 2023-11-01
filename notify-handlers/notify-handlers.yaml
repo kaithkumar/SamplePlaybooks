@@ -6,6 +6,8 @@
       shell:
         cmd: ls
       notify: "after_task"
+    - name: Flush handlers
+      meta: flush_handlers
     - name: to run a sample date command
       shell:
         cmd: date
