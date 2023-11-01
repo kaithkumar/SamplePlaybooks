@@ -6,4 +6,4 @@
       include_vars: my_vault.yaml
     - name: check the variable reading from vault
       debug: 
-        var: my_secrect
+        var: my_secret 
