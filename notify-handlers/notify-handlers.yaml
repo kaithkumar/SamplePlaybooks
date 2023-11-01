@@ -2,8 +2,6 @@
 - name: check notify and handlers
   hosts: all
   tasks:
-    - name: Flush handlers
-      meta: flush_handlers 
     - name: to run a sample ls command
       shell:
         cmd: ls
