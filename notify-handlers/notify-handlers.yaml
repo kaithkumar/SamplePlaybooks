@@ -2,15 +2,33 @@
 - name: check notify and handlers
   hosts: all
   tasks:
+    - name: Flush handlers
+      meta: flush_handlers 
     - name: to run a sample ls command
       shell:
         cmd: ls
-      notify: display a message
+      notify: "after_task"
     - name: to run a sample date command
       shell:
         cmd: date
-      notify: display a message
+      notify: "after_task"
   handlers:
     - name: display a message
       debug:
         msg: "this is a sample message after task"
+      listen: "after_task"
+
+
+# generally after running all the tasks successfully the handlers will run once after running after all the tasks
+# eventhough calling a number of times the handlers will run only once,
+# if some tasks fail before playbook completion the handlers will not run, for making it to run immediately after the task is completed use the below code
+
+# tasks:
+#   - name: Some tasks go here
+#     ansible.builtin.shell: ...
+
+#   - name: Flush handlers
+#     meta: flush_handlers       // this has to be used after the task
+
+#   - name: Some other tasks
+#     ansible.builtin.shell: ...
