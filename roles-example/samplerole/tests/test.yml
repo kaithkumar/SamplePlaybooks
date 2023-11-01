@@ -1,6 +1,6 @@
 ---
-- hosts: all
-  remote_user: root
+- name: check the runner
+  hosts: all
   become: yes
   roles:
     - samplerole
