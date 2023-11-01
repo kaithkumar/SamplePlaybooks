@@ -1,9 +1,12 @@
 ---
 # tasks file for samplerole
-- name: check the var
+- name: check the ordinary var
+  debug:
+    msg: "ordinary_var: {{sample_var}}"
+
+- name: check the default var
   debug:
     msg: "default_var: {{default_var}}"
-    msg: "ordinary_var: {{sample_var}}"
 
 - name: run ls sample task
   shell:
