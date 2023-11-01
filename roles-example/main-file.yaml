@@ -4,3 +4,11 @@
   become: yes
   roles:
     - samplerole
+
+#  can add multiple roles under roles under roles:
+
+#  command to run this file
+#  ansible-playbook roles-example/main-file.yaml -i hostfile
+
+# can run it by using the test.yml inside tests folder
+# ansible-playbook tests/test.yml -i tests/inventory
