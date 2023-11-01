@@ -9,5 +9,9 @@
         var: my_secret
   # command for running this file
   # ansible-playbook ansible-vault-check.yaml -i hostfile --ask-vault-pass
+
   # if variable file not read from the task we have to use the command
   # ansible-playbook ansible-vault-check.yaml -i hostfile -e my_vault.yaml --ask-vault-pass
+
+  # to avoid giving password of the vault save it in a file and use the below command
+  # ansible-playbook ansible-vault-check.yaml -i hostfile -e my_vault.yaml --vault-password-file=vault.pass
