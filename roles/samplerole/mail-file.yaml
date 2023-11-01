@@ -1,0 +1,6 @@
+---
+- name: To run the role
+  hosts: all
+  become: yes
+  roles:
+    - samplerole
