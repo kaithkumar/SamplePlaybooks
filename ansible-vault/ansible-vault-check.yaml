@@ -1,0 +1,7 @@
+---
+- name: check the vault reading
+  hosts: all
+  tasks:
+    - name: check the variable reading from vault
+      debug: 
+        var: my_secrect
