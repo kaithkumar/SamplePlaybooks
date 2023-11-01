@@ -14,3 +14,6 @@
         dest: /tmp/sample/apache/config.conf
       vars: 
         port_number: 81
+
+
+# ansible-playbook template-examples/sample-template.yaml -i hostfile
