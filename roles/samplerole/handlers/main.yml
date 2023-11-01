@@ -1,2 +1,7 @@
 ---
 # handlers file for samplerole
+- name: sample handler
+  debug:
+    msg: "this handler will run after all the tasks"
+  listen: "run_after_check"
+  

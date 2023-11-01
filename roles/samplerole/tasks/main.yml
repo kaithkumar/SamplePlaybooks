@@ -1,2 +1,16 @@
 ---
 # tasks file for samplerole
+- name: check the var
+  debug:
+    msg: "default_var: {{default_var}}"
+    msg: "ordinary_var: {{sample_var}}"
+
+- name: run ls sample task
+  shell:
+    cmd: ls
+  notify: "run_after_check"
+
+- name: run date sample task
+  shell:
+    cmd: date
+  notify: "run_after_check"

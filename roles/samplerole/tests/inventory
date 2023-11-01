@@ -1,2 +1,3 @@
-localhost
+[group]
+192.168.1.11 ansible_user=target_user ansible_password=password
 
