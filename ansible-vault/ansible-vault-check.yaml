@@ -6,4 +6,4 @@
       include_vars: /home/ansible_user/SamplePlaybooks/my_vault.yaml
     - name: check the variable reading from vault
       debug: 
-        var: my_secret 
+        var: my_secret
