@@ -5,7 +5,7 @@
   tasks:
     tasks:
     - name: Include the vault file
-      include_vars: my_vault.yaml
+      include_vars: SamplePlaybooks/my_vault.yaml
     - name: check the variable reading from vault
       debug: 
         var: my_secrect
