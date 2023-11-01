@@ -28,7 +28,7 @@
 #     ansible.builtin.shell: ...
 
 #   - name: Flush handlers
-#     meta: flush_handlers       // this has to be used after the task
+#     meta: flush_handlers       // this has to be used after the task to run the handlers immediately
 
 #   - name: Some other tasks
 #     ansible.builtin.shell: ...
