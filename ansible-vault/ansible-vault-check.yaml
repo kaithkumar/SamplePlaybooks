@@ -1,9 +1,7 @@
 ---
 - name: check the vault reading
   hosts: all
-
   tasks:
-    tasks:
     - name: Include the vault file
       include_vars: SamplePlaybooks/my_vault.yaml
     - name: check the variable reading from vault
